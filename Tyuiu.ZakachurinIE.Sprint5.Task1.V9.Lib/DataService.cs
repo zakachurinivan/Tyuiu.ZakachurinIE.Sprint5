@@ -18,7 +18,7 @@ namespace Tyuiu.ZakachurinIE.Sprint5.Task1.V9.Lib
             string strY;
             for (int i = startValue; i <= stopValue; i++)
             {
-                y = Math.Sin(i) + (Math.Cos(2 * i)) / 2 - 1.5 * i;
+                y = Math.Round(Math.Sin(i) + (Math.Cos(2 * i)) / 2 - 1.5 * i,2);
                 strY = Convert.ToString(y);
                 
                 if (i != stopValue)
