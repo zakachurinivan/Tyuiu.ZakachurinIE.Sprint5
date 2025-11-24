@@ -32,26 +32,28 @@ namespace Tyuiu.ZakachurinIE.Sprint5.Task2.V12.Lib
             string str = "";
             for (int i = 0; i < rows; i++)
             {
-                for (int j = 0;j < columns; j++)
+                for (int j = 0; j < columns; j++)
                 {
-                    if (j != columns-1)
+                    if (j != columns - 1)
                     {
-                        str = str + matrix[i, j] + ";" ;
+                        str = str + matrix[i, j] + ";";
                     }
                     else
                     {
                         str = str + matrix[i, j];
                     }
-                    if (i != rows - 1)
-                    {
-                        File.AppendAllText(path, str + Environment.NewLine);
-                    }
-                    else
-                    {
-                        File.AppendAllText(path, str);
-                    }
-                    str = "";
+
                 }
+                if (i != rows - 1)
+                {
+                    File.AppendAllText(path, str + Environment.NewLine);
+                }
+                else
+                {
+                    File.AppendAllText(path, str);
+                }
+                str = "";
+            
 
             }
             return path;
