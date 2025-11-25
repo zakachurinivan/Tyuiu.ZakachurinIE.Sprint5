@@ -28,6 +28,8 @@ namespace Tyuiu.ZakachurinIE.Sprint5.Task7.V1.Lib
                             strLine = strLine + line[i];
                         }
                     }
+                    strLine = strLine.TrimEnd(' ', '.');
+
                     File.AppendAllText(pathSaveFile, strLine + Environment.NewLine);
                     strLine = "";
                 }
