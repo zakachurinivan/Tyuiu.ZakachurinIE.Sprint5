@@ -19,16 +19,22 @@ namespace Tyuiu.ZakachurinIE.Sprint5.Task5.V20.Lib
                     {
                         if ((double.Parse(numbers[i], CultureInfo.InvariantCulture) > -10) && (double.Parse(numbers[i], CultureInfo.InvariantCulture) < 10))
                         {
-                            res += double.Parse(numbers[i], CultureInfo.InvariantCulture);
-                            k += 1;
+                            if (double.Parse(numbers[i], CultureInfo.InvariantCulture) == Math.Round(double.Parse(numbers[i], CultureInfo.InvariantCulture)))
+                            {
+                                res += double.Parse(numbers[i], CultureInfo.InvariantCulture);
+                                k += 1;
+                            }
+                            
                         }
                         
                     }
-                    res = res / k;
+                    
+                    
                 }
                 
+
             }
-            return Math.Round(res,3);
+            return Math.Round(res/4,3);
         }
     }
 }
